@@ -1,7 +1,4 @@
 
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
-
 module.exports = function(config) {
 
   // A useful way to reference the context we are runing eleventy in
@@ -14,9 +11,6 @@ module.exports = function(config) {
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
 
-
-  // add support for syntax highlighting
-  config.addPlugin(syntaxHighlight);
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
@@ -35,6 +29,7 @@ module.exports = function(config) {
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+  config.addPassthroughCopy("./src/site/admin");
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
