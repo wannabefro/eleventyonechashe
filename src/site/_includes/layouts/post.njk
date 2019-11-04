@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+bodyClass: posts
+templateEngineOverride: njk, md
+---
+
+<p class="date">
+  Posted on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+</p>
+<main>
+  {{ content | safe }}
+  <div class="footnote">
+    <ul>
+      Tags:&nbsp;
+      {%- for tag in tags -%}
+        <li><a href="/posts/tags/{{tag}}/">{{tag}}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</main>

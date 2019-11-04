@@ -4,9 +4,13 @@
       <a href="/">home</a>
     </li>
     <li>
+      <a href="/posts">blog</a>
+    </li>
+    <li>
       <a href="/about">about</a>
     </li>
   </ul>
   <h1>{{ title }}</h1>
+  {%- if renderData.subtitle %}<p class="subtitle">{{ renderData.subtitle | safe }}</p>{% endif %}
   {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
 </header>

@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - post
+permalink: /posts/tags/{{ tag }}/
+title: Posts
+renderData:
+    subtitle: "Tagged {{tag}}"
+---
+{% set postslist = collections[ tag ] %}
+{% include "layouts/postslist.njk" %}
