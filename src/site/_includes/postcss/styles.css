@@ -51,7 +51,7 @@ body {
 }
 
 .scrim {
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 h1, h2, h3 {
@@ -123,7 +123,7 @@ a:focus {
     display: inline-block;
     border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: mix($text-color, $accent-color, 80%);
+    border-top-color: mix($text-color, $accent-color, 60%);
     border-bottom-style: none;
     padding-top: 0.8em;
     padding-bottom: 2em;
@@ -131,7 +131,9 @@ a:focus {
     margin-right: 0.7em;
     width: 9em;
     text-align: left;
-    color: mix($text-color, $accent-color, 80%);
+    /* color: mix($link-color, $accent-color, 80%); */
+    color: $link-color;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     text-transform: uppercase;
   }
