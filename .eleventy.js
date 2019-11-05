@@ -1,3 +1,4 @@
+const pluginPWA = require("eleventy-plugin-pwa");
 
 module.exports = function(config) {
 
@@ -26,10 +27,11 @@ module.exports = function(config) {
       return minified.code;
   });
 
-
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/admin");
+
+  config.addPlugin(pluginPWA);
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
