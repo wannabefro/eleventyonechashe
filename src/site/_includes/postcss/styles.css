@@ -51,7 +51,7 @@ body {
 }
 
 .scrim {
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 h1, h2, h3 {
@@ -92,6 +92,7 @@ p {
 
 ul, ol {
   padding-left: 1em;
+  list-style: none;
 }
 
 a:link,
@@ -119,7 +120,9 @@ a:focus {
   padding-top: 3em;
 
   li {
-    display: inline;
+    @media (min-width: $mid) {
+      display: inline;
+    };
   }
 
   a:link,
